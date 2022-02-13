@@ -1,29 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
+import { deepPurple, pink } from '@mui/material/colors'
 
-import Home from './pages/Home'
-
+import App from './App'
 import './index.css'
 
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom"
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: deepPurple[900],
+    },
+    secondary: {
+      main: pink[500],
+    }
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
-
-    <BrowserRouter>
-    <Routes>
-
-      <Route path="/" element={ <Home /> } />
-
-    </Routes>
-    </BrowserRouter>
-    
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
-  
   document.getElementById('root')
 )
 
