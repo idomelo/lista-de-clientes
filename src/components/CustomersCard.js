@@ -1,15 +1,19 @@
 import * as React from 'react'
 
-import Card from '@mui/material/Card'
-import CardHeader from '@mui/material/CardHeader'
-import CardContent from '@mui/material/CardContent'
-import CardActions from '@mui/material/CardActions'
-import Avatar from '@mui/material/Avatar'
-import IconButton from '@mui/material/IconButton'
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardActions,
+  Avatar,
+  IconButton,
+  Typography,
+} from '@mui/material'
 
-import Typography from '@mui/material/Typography'
-import FavoriteIcon from '@mui/icons-material/Favorite'
-import ShareIcon from '@mui/icons-material/Share'
+import {
+  Favorite as FavoriteIcon,
+  Share as ShareIcon,
+} from '@mui/icons-material/'
 
 const CustomersCard = ({
   name,
