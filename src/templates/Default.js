@@ -16,7 +16,7 @@ const Default = ({ children }) => {
   return (
     <>
       <Header />
-      <Container className={classes.container} maxWidth="sm">
+      <Container className={classes.container} maxWidth="md">
         { children }
       </Container>
     </>
