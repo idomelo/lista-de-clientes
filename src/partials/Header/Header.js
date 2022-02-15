@@ -1,17 +1,40 @@
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import {
   AppBar,
   Toolbar,
   Typography,
   Button,
   IconButton,
+  Drawer,
+  List,
+  ListItem ,
+  ListItemIcon,
+  ListItemText,
 } from '@mui/material'
 
-import { Menu } from '@mui/icons-material/'
+import { 
+  Menu,
+  Home,
+  PersonAdd,
+} from '@mui/icons-material/'
 
 import useStyles from './Header.style'
 
 const Header = () => {
   const classes = useStyles()
+  const [menuOpen, setMenuOpen] = useState(false)
+  const navigate = useNavigate()
+
+  const handleToggleMenu = ()=> {
+    setMenuOpen(!menuOpen)
+  }
+
+  const handleMenuClick = route => {
+    navigate(route)
+    handleToggleMenu()
+  }
 
   return (
     <>
@@ -23,8 +46,9 @@ const Header = () => {
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
+            onClick={() => handleToggleMenu()}
           >
-            <Menu />
+            <Menu/>
           </IconButton>
           <Typography variant="h6" component="div" className={classes.title}>
             My App
@@ -32,6 +56,21 @@ const Header = () => {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
+
+      <Drawer open={menuOpen} onClose={() => handleToggleMenu()}>
+
+        <List>
+          <ListItem button onClick={() => handleMenuClick('/')}>
+            <ListItemIcon><Home /></ListItemIcon>
+            <ListItemText>Home</ListItemText>
+          </ListItem>
+          <ListItem button onClick={() => handleMenuClick('/customers')}>
+            <ListItemIcon><PersonAdd /></ListItemIcon>
+            <ListItemText>Cadastro de Clientes</ListItemText>
+          </ListItem>
+        </List>
+
+      </Drawer>
     </>  
   )
 }

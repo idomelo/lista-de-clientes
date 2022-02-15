@@ -13,17 +13,15 @@ import {
 const App = () => {
   return (
     <>
-      <TemplateDefault>
-        <BrowserRouter>
+      <BrowserRouter>
+        <TemplateDefault>
           <Routes>
             <Route path="/" element={<TemplatePage title="Página Inicial" component={<Home />} />}  />
-              
             
             <Route path="/customers" element={<TemplatePage title="Clientes" component={<Customers />}/>} />
-              
           </Routes>
-        </BrowserRouter>
-      </TemplateDefault>
+        </TemplateDefault>
+      </BrowserRouter>
     </>
   )
 }
