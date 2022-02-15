@@ -15,9 +15,9 @@ import {
 } from '@mui/material'
 
 import { 
-  Menu,
-  Home,
-  PersonAdd,
+  Menu as MenuIcon,
+  Home as HomeIcon,
+  PersonAdd as PersonAddIcon,
 } from '@mui/icons-material/'
 
 import useStyles from './Header.style'
@@ -48,7 +48,7 @@ const Header = () => {
             sx={{ mr: 2 }}
             onClick={() => handleToggleMenu()}
           >
-            <Menu/>
+            <MenuIcon/>
           </IconButton>
           <Typography variant="h6" component="div" className={classes.title}>
             My App
@@ -61,11 +61,11 @@ const Header = () => {
 
         <List>
           <ListItem button onClick={() => handleMenuClick('/')}>
-            <ListItemIcon><Home /></ListItemIcon>
+            <ListItemIcon><HomeIcon /></ListItemIcon>
             <ListItemText>Home</ListItemText>
           </ListItem>
           <ListItem button onClick={() => handleMenuClick('/customers')}>
-            <ListItemIcon><PersonAdd /></ListItemIcon>
+            <ListItemIcon><PersonAddIcon /></ListItemIcon>
             <ListItemText>Cadastro de Clientes</ListItemText>
           </ListItem>
         </List>
