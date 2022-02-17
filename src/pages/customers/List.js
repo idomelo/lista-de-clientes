@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Grid from '@mui/material/Grid'
 
@@ -6,6 +7,7 @@ import CustomersCard from '../../components/CustomersCard'
 
 const Customers = () => {
   const [customers, setCustomers] = useState([])
+  const navigate = useNavigate()
 
   useEffect( () => {
     axios.get('https://reqres.in/api/users')
@@ -20,8 +22,11 @@ const Customers = () => {
     .then( () => {
       const newCustomersState = customers.filter(customer => customer.id !== id)
       setCustomers(newCustomersState)
-    }
-    )
+    })
+  }
+
+  const handleEditCustomer = id => {
+    navigate(`/customers/edit/${ id }`)
   }
 
   return (
@@ -37,6 +42,7 @@ const Customers = () => {
                 email={item.email} 
                 avatar={item.avatar}
                 onRemoveCustomer={handleRemoveCustomer}
+                onEditCustomer={handleEditCustomer}
               />
             </Grid>
           )

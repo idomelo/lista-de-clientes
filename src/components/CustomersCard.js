@@ -23,6 +23,7 @@ const CustomersCard = ({
   email,
   avatar,
   onRemoveCustomer,
+  onEditCustomer,
 }) => {
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -33,6 +34,10 @@ const CustomersCard = ({
   const handleConfirmModal = () => {
     onRemoveCustomer(id)
     handleToggleModal()
+  }
+
+  const handleEditCustomer = id => {
+    onEditCustomer(id)
   }
 
   return (
@@ -51,7 +56,7 @@ const CustomersCard = ({
           </Typography>
         </CardContent>
         <CardActions disableSpacing>
-          <IconButton aria-label="Editar usuário">
+          <IconButton aria-label="Editar usuário" onClick={() => handleEditCustomer(id)}>
             <EditIcon />
           </IconButton>
           <IconButton aria-label="Deletar usuário" onClick={() => handleToggleModal()}>

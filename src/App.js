@@ -4,6 +4,7 @@ import TemplatePage from './templates/TemplatePage'
 import Home from './pages/Home'
 import CustomersList from './pages/customers/List'
 import CustomersRegister from './pages/customers/Register'
+import CustomersEdit from './pages/customers/Edit'
 
 import {
   BrowserRouter,
@@ -18,6 +19,7 @@ const App = () => {
         <TemplateDefault>
           <Routes>
             <Route path="/" element={<TemplatePage title="Página Inicial" component={<Home />} />}  />
+            <Route path="/customers/edit/:id" element={<TemplatePage title="Editar Cliente" component={<CustomersEdit />} />}  />
             <Route path="/customers/add" element={<TemplatePage title="Adicionar Cliente" component={<CustomersRegister />} />}  />
             <Route path="/customers" element={<TemplatePage title="Clientes" component={<CustomersList />}/>} />
           </Routes>
