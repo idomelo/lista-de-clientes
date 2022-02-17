@@ -18,6 +18,7 @@ import {
   Menu as MenuIcon,
   Home as HomeIcon,
   PersonAdd as PersonAddIcon,
+  Person as PersonIcon,
 } from '@mui/icons-material/'
 
 import useStyles from './Header.style'
@@ -62,9 +63,15 @@ const Header = () => {
         <List>
           <ListItem button onClick={() => handleMenuClick('/')}>
             <ListItemIcon><HomeIcon /></ListItemIcon>
-            <ListItemText>Home</ListItemText>
+            <ListItemText>Página Inicial</ListItemText>
           </ListItem>
+          
           <ListItem button onClick={() => handleMenuClick('/customers')}>
+            <ListItemIcon><PersonIcon /></ListItemIcon>
+            <ListItemText>Clientes</ListItemText>
+          </ListItem>
+          
+          <ListItem button onClick={() => handleMenuClick('/customers/add')}>
             <ListItemIcon><PersonAddIcon /></ListItemIcon>
             <ListItemText>Cadastro de Clientes</ListItemText>
           </ListItem>

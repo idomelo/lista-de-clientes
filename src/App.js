@@ -2,7 +2,8 @@ import TemplateDefault from './templates/Default'
 import TemplatePage from './templates/TemplatePage'
 
 import Home from './pages/Home'
-import Customers from './pages/Customers'
+import CustomersList from './pages/customers/List'
+import CustomersRegister from './pages/customers/Register'
 
 import {
   BrowserRouter,
@@ -17,8 +18,8 @@ const App = () => {
         <TemplateDefault>
           <Routes>
             <Route path="/" element={<TemplatePage title="Página Inicial" component={<Home />} />}  />
-            
-            <Route path="/customers" element={<TemplatePage title="Clientes" component={<Customers />}/>} />
+            <Route path="/customers/add" element={<TemplatePage title="Adicionar Usuário" component={<CustomersRegister />} />}  />
+            <Route path="/customers" element={<TemplatePage title="Clientes" component={<CustomersList />}/>} />
           </Routes>
         </TemplateDefault>
       </BrowserRouter>
