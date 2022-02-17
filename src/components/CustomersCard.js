@@ -37,7 +37,7 @@ const CustomersCard = ({
 
   return (
     <>
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345, margin:'0 auto'}}>
         <CardHeader
           avatar={
             <Avatar aria-label="recipe" src={avatar} />

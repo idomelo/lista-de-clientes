@@ -18,7 +18,7 @@ const App = () => {
         <TemplateDefault>
           <Routes>
             <Route path="/" element={<TemplatePage title="Página Inicial" component={<Home />} />}  />
-            <Route path="/customers/add" element={<TemplatePage title="Adicionar Usuário" component={<CustomersRegister />} />}  />
+            <Route path="/customers/add" element={<TemplatePage title="Adicionar Cliente" component={<CustomersRegister />} />}  />
             <Route path="/customers" element={<TemplatePage title="Clientes" component={<CustomersList />}/>} />
           </Routes>
         </TemplateDefault>

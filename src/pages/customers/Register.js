@@ -1,11 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import axios from 'axios'
+
 import {
   TextField,
-  Button,
   Stack,
 } from '@mui/material/'
 
+import Snackbar from '../../components/Snackbar'
+import ButtonLoading from '../../components/ButtonLoading'
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -18,6 +20,8 @@ const Register = () => {
       error: false
     },
   })
+  const [loading, setLoading] = React.useState(false)
+  const [openSnackbar, setOpenSnackbar] = useState(false)
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -53,40 +57,49 @@ const Register = () => {
         helperText: 'Campo obrigatório'
       } 
     }
+
     if(hasError) {
       return setForm(newFormState)
+    }else{
+      setLoading(true)
     }
+
     axios.post('https://reqres.in/api/users', {
       name: form.name.value,
       job: form.job.value
     }).then(response => {
-      console.log(response)
+      setLoading(false)
+      setOpenSnackbar(true)
     })
   }
 
   return (
-    <Stack direction='column' maxWidth='400px' margin='0 auto'
-    spacing={{ xs: 2, sm: 3, md: 4 }}>
-      <TextField
-        name="name"
-        id="outlined-basic"
-        label="Digite o Nome:"
-        value={form.name.value}
-        error={form.name.error}
-        helperText={form.name.error? form.name.helperText : ''}
-        onChange={handleInputChange}
-      />
-      <TextField
-        name="job"
-        id="outlined-basic"
-        label="Digite o Cargo:"
-        value={form.job.value}
-        error={form.job.error}
-        helperText={form.job.error? form.job.helperText : ''}
-        onChange={handleInputChange}
-      />
-      <Button variant="contained" onClick={handleRegisterButton}>Confirmar</Button>
-    </Stack>
+    <>
+      <Stack direction='column' maxWidth='400px' margin='0 auto'
+      spacing={{ xs: 2, sm: 3, md: 4 }}>
+        <TextField
+          name="name"
+          id="outlined-basic"
+          label="Digite o Nome:"
+          value={form.name.value}
+          error={form.name.error}
+          helperText={form.name.error? form.name.helperText : ''}
+          onChange={handleInputChange}
+        />
+        <TextField
+          name="job"
+          id="outlined-basic"
+          label="Digite o Cargo:"
+          value={form.job.value}
+          error={form.job.error}
+          helperText={form.job.error? form.job.helperText : ''}
+          onChange={handleInputChange}
+        />
+        <ButtonLoading text="Confirmar" onClick={handleRegisterButton} loading={loading} />
+      </Stack>
+      <Snackbar open={openSnackbar} severity="success" text="Cliente cadastrado com sucesso!" onClose={() => setOpenSnackbar(false)}/>
+    </>
+    
     
   )
 }
