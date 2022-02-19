@@ -49,7 +49,7 @@ Os dados são exibidos e é possível simular edição e registro de clientes. A
 ## :sparkles: Funcionalidades ##
 
 :heavy_check_mark: Request de dados para API Real;\
-:heavy_check_mark: Componentes do Material UI
+:heavy_check_mark: Componentes do Material UI;\
 :heavy_check_mark: Navegação entre Rotas;\
 :heavy_check_mark: Request via Axios;
 
@@ -58,7 +58,7 @@ Os dados são exibidos e é possível simular edição e registro de clientes. A
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [React v17.0.2](https://pt-br.reactjs.org/)
-- [MAterial UI v5.4.2](https://mui.com/)
+- [Material UI v5.4.2](https://mui.com/)
 - [React Router v6.2.1](https://reactrouter.com/)
 - [axios v0.26.0](https://expo.io/)
 - [reqres API fake](https://reqres.in/)
