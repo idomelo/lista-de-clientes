@@ -64,7 +64,7 @@ const CustomersCard = ({
           </IconButton>
         </CardActions>
       </Card>
-      <ModalConfirm 
+      <ModalConfirm
         open={modalOpen}
         title="Deseja realmente excluir este Usuário?"
         message= "Essa ação não pode ser desfeita"

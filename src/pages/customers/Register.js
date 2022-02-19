@@ -8,6 +8,7 @@ import {
 
 import Snackbar from '../../components/Snackbar'
 import ButtonLoading from '../../components/ButtonLoading'
+import OutputRequestViewer from '../../components/OutputRequestViewer'
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -22,6 +23,11 @@ const Register = () => {
   })
   const [loading, setLoading] = React.useState(false)
   const [openSnackbar, setOpenSnackbar] = useState(false)
+  const [ reqApi, setReqApi] = useState(`{ 
+
+
+  }`)
+  const [reqStatus, setReqStatus] = useState('')
 
   const handleInputChange = (e) => {
     const { name, value } = e.target
@@ -67,9 +73,24 @@ const Register = () => {
     axios.post('https://reqres.in/api/users', {
       name: form.name.value,
       job: form.job.value
-    }).then(response => {
+    }).then(res => {
       setLoading(false)
       setOpenSnackbar(true)
+      const data  = res.data
+      console.log(res)
+      const dataKeys = Object.keys(data)
+      setReqStatus(`${res.status}`)
+      if (data && dataKeys) {
+        setReqApi(
+        `   { 
+          "${dataKeys[0]}": "${data.name}",
+          "${dataKeys[1]}": "${data.job}",
+          "${dataKeys[2]}": "${data.id}",
+          "${dataKeys[3]}": "${data.createdAt}"
+        }`)
+      } else {
+        setReqApi('Algum erro aconteceu, Tente novamente!')
+      }
     })
   }
 
@@ -96,6 +117,9 @@ const Register = () => {
           onChange={handleInputChange}
         />
         <ButtonLoading text="Confirmar" onClick={handleRegisterButton} loading={loading} />
+        <Stack direction='column' maxWidth='400px' margin='0 auto' spacing={{ xs: 2, sm: 3, md: 4 }}>
+          <OutputRequestViewer reqStatus={reqStatus} reqApi={reqApi}/>
+        </Stack>
       </Stack>
       <Snackbar open={openSnackbar} severity="success" text="Cliente cadastrado com sucesso!" onClose={() => setOpenSnackbar(false)}/>
     </>

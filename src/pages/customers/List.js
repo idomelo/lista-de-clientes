@@ -26,7 +26,7 @@ const Customers = () => {
   }
 
   const handleEditCustomer = id => {
-    navigate(`/customers/edit/${ id }`)
+    navigate(`/edit/${ id }`)
   }
 
   return (

@@ -18,7 +18,6 @@ import {
   Menu as MenuIcon,
   Home as HomeIcon,
   PersonAdd as PersonAddIcon,
-  Person as PersonIcon,
 } from '@mui/icons-material/'
 
 import useStyles from './Header.style'
@@ -52,7 +51,7 @@ const Header = () => {
             <MenuIcon/>
           </IconButton>
           <Typography variant="h6" component="div" className={classes.title}>
-            My App
+            Lista de Clientes
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
@@ -66,12 +65,7 @@ const Header = () => {
             <ListItemText>Página Inicial</ListItemText>
           </ListItem>
           
-          <ListItem button onClick={() => handleMenuClick('/customers')}>
-            <ListItemIcon><PersonIcon /></ListItemIcon>
-            <ListItemText>Lista de Clientes</ListItemText>
-          </ListItem>
-          
-          <ListItem button onClick={() => handleMenuClick('/customers/add')}>
+          <ListItem button onClick={() => handleMenuClick('/add')}>
             <ListItemIcon><PersonAddIcon /></ListItemIcon>
             <ListItemText>Cadastrar Cliente</ListItemText>
           </ListItem>

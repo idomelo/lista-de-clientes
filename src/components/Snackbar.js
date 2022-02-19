@@ -8,7 +8,7 @@ import {
 
 const CustomizedSnackbar = ({open, text, onClose, severity}) => {
 
-  const handleClose = (event, reason) => {
+  const handleClose = (reason) => {
     if (reason === 'clickaway') {
       return
     }
@@ -17,7 +17,7 @@ const CustomizedSnackbar = ({open, text, onClose, severity}) => {
 
   return (
     <Stack spacing={2} sx={{ width: '100%' }}>
-      <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
+      <Snackbar open={open} autoHideDuration={3000} onClose={handleClose}>
         <MuiAlert elevation={6} variant="filled" onClose={handleClose} severity={severity} sx={{ width: '100%' }}>
           {text}
         </MuiAlert>

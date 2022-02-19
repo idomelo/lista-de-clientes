@@ -1,3 +1,5 @@
+import React from 'react'
+
 import Container from '@mui/material/Container'
 import { makeStyles } from '@material-ui/styles'
 
@@ -16,6 +18,7 @@ const Default = ({ children }) => {
   return (
     <>
       <Header />
+
       <Container className={classes.container} maxWidth="md">
         { children }
       </Container>

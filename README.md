@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+<div align="center" id="top"> 
+  <img src="./lista-de-clientes.gif" alt="Lista De Clientes" width="600"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  &#xa0;
 
-## Available Scripts
+  <a href="https://listadeclientes.vercel.app/">Demo</a>
+</div>
 
-In the project directory, you can run:
+<h1 align="center">Lista De Clientes</h1>
 
-### `npm start`
+<p align="center">
+  <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/idomelo/lista-de-clientes?color=56BEB8">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/idomelo/lista-de-clientes?color=56BEB8">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/idomelo/lista-de-clientes?color=56BEB8">
 
-### `npm test`
+  <img alt="Licença" src="https://img.shields.io/github/license/idomelo/lista-de-clientes?color=56BEB8">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/idomelo/lista-de-clientes?color=56BEB8" /> -->
 
-### `npm run build`
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/idomelo/lista-de-clientes?color=56BEB8" /> -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/idomelo/lista-de-clientes?color=56BEB8" /> -->
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- Status -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- <h4 align="center"> 
+	🚧  Lista De Clientes 🚀 Em construção...  🚧
+</h4> 
 
-### `npm run eject`
+<hr> -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<p align="center">
+  <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
+  <a href="#sparkles-funcionalidades">Funcionalidades</a> &#xa0; | &#xa0;
+  <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-pré-requesitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
+  <a href="https://github.com/idomelo" target="_blank">Autor</a>
+</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## :dart: Sobre ##
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Aplicação Feita em React e Material UI que faz request de uma lista de usuários para API Rest.
+Os dados são exibidos e é possível simular edição e registro de clientes. A API não permite uma edição real, portanto, é possível somente visualizar os dados enviados e a resposta dela.
 
-## Learn More
+## :sparkles: Funcionalidades ##
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+:heavy_check_mark: Request de dados para API Real;\
+:heavy_check_mark: Componentes do Material UI
+:heavy_check_mark: Navegação entre Rotas;\
+:heavy_check_mark: Request via Axios;
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## :rocket: Tecnologias ##
 
-### Code Splitting
+As seguintes ferramentas foram usadas na construção do projeto:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- [React v17.0.2](https://pt-br.reactjs.org/)
+- [MAterial UI v5.4.2](https://mui.com/)
+- [React Router v6.2.1](https://reactrouter.com/)
+- [axios v0.26.0](https://expo.io/)
+- [reqres API fake](https://reqres.in/)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## :white_check_mark: Pré requisitos ##
 
-### Making a Progressive Web App
+Antes de começar :checkered_flag:, você precisa ter o [Git](https://git-scm.com) e o [Node](https://nodejs.org/en/) instalados em sua maquina.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## :checkered_flag: Começando ##
 
-### Advanced Configuration
+```bash
+# Clone este repositório
+$ git clone https://github.com/idomelo/lista-de-clientes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Entre na pasta
+$ cd lista-de-clientes
 
-### Deployment
+# Instale as dependências
+$ npm i axios react-router-dom 
+@mui/material
+@emotion/react
+@emotion/styled
+@mui/icons-material
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Para iniciar o projeto
+$ npm start
 
-### `npm run build` fails to minify
+# O app vai inicializar em <http://localhost:3000>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feito com :heart: por <a href="https://github.com/idomelo" target="_blank">Ido Melo</a>
+
+&#xa0;
+
+<a href="#top">Voltar para o topo</a>

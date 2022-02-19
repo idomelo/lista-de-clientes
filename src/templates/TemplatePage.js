@@ -1,13 +1,15 @@
+import React from 'react'
+
 import { Typography } from '@mui/material/'
 
-const TemplatePage = ({ title, component }) => {
+const TemplatePage = ({ titlePage, component }) => {
 
   return (
     <>
-      <Typography variant="h4" gutterBottom>
-        {title}
+      <Typography variant="h5" sx={{textAlign: 'center'}} gutterBottom>
+        {titlePage}
       </Typography>
-    
+
       {component}
     </>
   )
