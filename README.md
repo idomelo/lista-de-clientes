@@ -48,7 +48,7 @@ Os dados são exibidos e é possível simular edição e registro de clientes. A
 
 ## :sparkles: Funcionalidades ##
 
-:heavy_check_mark: Request de dados para API Real;\
+:heavy_check_mark: Consumo de uma API Real;\
 :heavy_check_mark: Componentes do Material UI;\
 :heavy_check_mark: Navegação entre Rotas;\
 :heavy_check_mark: Request via Axios;
