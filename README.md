@@ -60,7 +60,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React v17.0.2](https://pt-br.reactjs.org/)
 - [Material UI v5.4.2](https://mui.com/)
 - [React Router v6.2.1](https://reactrouter.com/)
-- [axios v0.26.0](https://expo.io/)
+- [axios v0.26.0](https://axios-http.com/ptbr/docs/intro)
 - [reqres API fake](https://reqres.in/)
 
 
