@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./lista-de-clientes.gif" alt="Lista De Clientes" width="600"/>
+  <img src="./lista-de-clientes.gif" alt="Lista De Clientes" width="900"/>
 
   &#xa0;
 
@@ -14,8 +14,6 @@
   <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/idomelo/lista-de-clientes?color=56BEB8">
 
   <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/idomelo/lista-de-clientes?color=56BEB8">
-
-  <img alt="Licença" src="https://img.shields.io/github/license/idomelo/lista-de-clientes?color=56BEB8">
 
   <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/idomelo/lista-de-clientes?color=56BEB8" /> -->
 
@@ -36,7 +34,7 @@
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
   <a href="#sparkles-funcionalidades">Funcionalidades</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-pré-requesitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-pré-requisitos">Pré requisitos</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
   <a href="https://github.com/idomelo" target="_blank">Autor</a>
 </p>
