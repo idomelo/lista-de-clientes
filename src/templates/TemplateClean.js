@@ -3,9 +3,6 @@ import React from 'react'
 import Container from '@mui/material/Container'
 import { makeStyles } from '@material-ui/styles'
 
-import Header from '../partials/Header/Header'
-import useAuth from '../state/auth'
-
 //JSS
 const useStyles = makeStyles({
   container: {
@@ -13,17 +10,13 @@ const useStyles = makeStyles({
   },
 })
 
-const Default = ({ children }) => {
+const Default = ({ Component }) => {
   const classes = useStyles()
-
-  const {user} = useAuth()
 
   return (
     <>
-      <Header user={user}/>
-
       <Container className={classes.container} maxWidth="md">
-        { children }
+        <Component/>
       </Container>
     </>
   )

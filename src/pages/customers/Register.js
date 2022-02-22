@@ -29,7 +29,7 @@ const Register = () => {
   }`)
   const [reqStatus, setReqStatus] = useState('')
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     const { name, value } = e.target
     setForm({
       ...form,
@@ -77,7 +77,6 @@ const Register = () => {
       setLoading(false)
       setOpenSnackbar(true)
       const data  = res.data
-      console.log(res)
       const dataKeys = Object.keys(data)
       setReqStatus(`${res.status}`)
       if (data && dataKeys) {

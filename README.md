@@ -36,7 +36,7 @@
   <a href="#dart-sobre">Sobre</a> &#xa0; | &#xa0;
   <a href="#sparkles-funcionalidades">Funcionalidades</a> &#xa0; | &#xa0;
   <a href="#rocket-tecnologias">Tecnologias</a> &#xa0; | &#xa0;
-  <a href="#white_check_mark-pré-requesitos">Pré requisitos</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-pré-requisitos">Pré requisitos</a> &#xa0; | &#xa0;
   <a href="#checkered_flag-começando">Começando</a> &#xa0; | &#xa0;
   <a href="https://github.com/idomelo" target="_blank">Autor</a>
 </p>
@@ -51,8 +51,9 @@ Os dados são exibidos e é possível simular edição e registro de clientes. A
 ## :sparkles: Funcionalidades ##
 
 :heavy_check_mark: Request de dados para API Real;\
-:heavy_check_mark: Componentes do Material UI
+:heavy_check_mark: Componentes do Material UI;\
 :heavy_check_mark: Navegação entre Rotas;\
+:heavy_check_mark: Context API;\
 :heavy_check_mark: Request via Axios;
 
 ## :rocket: Tecnologias ##

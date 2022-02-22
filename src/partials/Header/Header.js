@@ -22,7 +22,7 @@ import {
 
 import useStyles from './Header.style'
 
-const Header = () => {
+const Header = ({ user }) => {
   const classes = useStyles()
   const [menuOpen, setMenuOpen] = useState(false)
   const navigate = useNavigate()
@@ -36,6 +36,10 @@ const Header = () => {
     handleToggleMenu()
   }
 
+  const handleClickButton = route => {
+    navigate(route)
+  }  
+  
   return (
     <>
       <AppBar position="static">
@@ -53,7 +57,11 @@ const Header = () => {
           <Typography variant="h6" component="div" className={classes.title}>
             Lista de Clientes
           </Typography>
-          <Button color="inherit">Login</Button>
+          {
+            user.logged
+              ? <Typography variant="h6">{`Bem vindo, ${user.name} ${user.lastname} !`}</Typography>
+              : <Button color="inherit" onClick={() => handleClickButton('/login')}>Login</Button>
+          }
         </Toolbar>
       </AppBar>
 
